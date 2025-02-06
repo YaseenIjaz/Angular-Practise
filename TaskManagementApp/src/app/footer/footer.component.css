@@ -1,0 +1,53 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    background: #1e1e2f;
+    color: white;
+    padding: 1rem;
+    
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 2.25rem;
+  }
+  
+  .social-links img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a:hover img {
+    transform: scale(1.1);
+  }
+  
+  @media (min-width: 768px) {
+    footer {
+      padding: 30px;
+    }
+    
+    footer p {
+      font-size: 14px;
+    }
+    
+    .social-links img {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+  
