@@ -1,0 +1,25 @@
+<section id="tasks">
+    @if(userName){
+        <header>
+        <h2>{{userName}}'s Tasks </h2>
+        <menu>
+            <button>Add Task</button>
+        </menu>
+        </header>
+    
+    
+        <ul>
+        @for(task of selectedUserTasks; track task.id){
+        <li>
+            <app-task [task]="task" (complete)="handleComplete($event)"/>
+        </li>
+        }
+        </ul>
+    }
+    @else{
+
+        <h3>No user selected. Please select a user to see tasks.</h3>
+    }
+
+  </section>
+

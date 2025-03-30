@@ -10,25 +10,22 @@
 <app-header></app-header>
 <main>
     <ul id="users">
-        <li>
-            <app-user></app-user>
-        </li>
-        <li>
-            <app-user></app-user>
-        </li>
-        <li>
-            <app-user></app-user>
-        </li>
-        <li>
-            <app-user></app-user>
-        </li>
-        <li>
-            <app-user></app-user>
-        </li>
-        <li>
-            <app-user></app-user>
-        </li>
+        @for(user of users ; track user.id){
+            <li>
+                <app-user [user]="user" (userSelect)="updateSelectedUser($event.name, $event.id)"></app-user>
+            </li>
+        }
+        
+        
     </ul>
+    <div>
+        
+        <app-tasks [userName] = "SelectedUserName" [userId] = "SelectedUserId"></app-tasks>
+        
+        
+    </div>
+    
+    
 </main>
 <app-footer></app-footer>
 

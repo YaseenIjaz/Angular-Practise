@@ -7,10 +7,9 @@ header
   width: 90%;
   margin: 0 auto 0 auto;
   text-align: center;
-  background : blueviolet;
+  background : #7e57c2 ;
   padding: 1rem;
   border-radius: 0 0 12px 12px;
-  box-shadow: 6px 6px 25px -2px rgba(153,147,153,1);
 }
 
 header div{

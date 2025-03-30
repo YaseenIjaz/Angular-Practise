@@ -1,18 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { userData } from './user-data';
 
-const randomIndex = Math.floor(Math.random()* userData.length);
+
+interface User{
+  id : string;
+  name : string;
+  avatar : string;
+}
+
+
 
 @Component({
   selector: 'app-user',
   imports: [],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
-})
+}) 
+
 export class UserComponent {
-   selectedUser = userData[randomIndex];
+   
+  @Input({required : true}) user !: User;
 
    get imagePath(){
-    return `assets/users/`+this.selectedUser.avatar;
+    return `assets/users/`+this.user.avatar;
    }
+
+   @Output() userSelect = new EventEmitter<{ name: string; id: string }>();
+   
+   onUserSelect(){
+    this.userSelect.emit({ name: this.user.name, id: this.user.id });
+   }
+   
 }

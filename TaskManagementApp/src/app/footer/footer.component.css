@@ -1,12 +1,9 @@
 footer {
     display: flex;
     flex-direction: column;
-    position: fixed;
     bottom: 0px;
-    left: 0;
     align-items: center;
     gap: 10px;
-    width: 100%;
     margin: 0 auto 0 auto;
     text-align: center;
     background: #1e1e2f;

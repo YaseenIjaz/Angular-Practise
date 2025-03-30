@@ -5,7 +5,7 @@ export const userData = [
         avatar: "user-1.jpg",
       },
       {
-        id: 'u2',
+        id: 'u2', 
         name: 'Emily Thompson',
         avatar: 'user-2.jpg',
       },
